@@ -1,0 +1,226 @@
+$VR-purpl-color: #5222D0;
+$VR-peach-color: #EC615B;
+
+%text-main-style {
+    color: #000;
+    font-family: Roboto Slab, serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 160%; /* 32px */
+}
+
+%text-button-style {
+    color: #FFF;
+    text-transform: uppercase;
+    font-family: Signika, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+%header-big-style {
+    color: var(--unnamed, #000);
+    font-family: Signika, sans-serif;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 72px */
+}
+
+%header-small-style {
+color: var(--unnamed, #000);
+font-family: Signika, sans-serif;
+font-size: 30px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%; /* 36px */
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40px 1fr; 
+}
+
+.header__monitor-background {
+height: 40px;
+grid-column: span 2;
+
+color: rgba(0, 0, 0, 0.5);
+text-align: center;
+font-family: Helvetica;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 100%; /* 16px */
+
+background-image: url(../images/browser.png);
+background-repeat: no-repeat ;
+background-size: cover;
+}
+
+.monitor-background__text{
+    padding: 12px;
+}
+
+.header__logo {
+    margin-left: 76px;
+    margin-top: 50px;
+}
+
+.header__shopping-cart-button {
+    justify-self: flex-end;
+    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 115px;
+    height: 38px;
+    border-radius: 100px;
+    margin-right: 74px;
+
+    @extend %text-button-style;
+    background-color: $VR-purpl-color;
+}
+
+
+.main-page {
+    background-image: url(../images/pic.png);
+    background-repeat: no-repeat;
+    background-position: right;
+
+}
+.main-page__title{
+margin: 76px 0px 10px 126px;
+@extend %header-big-style;
+}
+
+.main-page__text {
+    @extend %text-main-style;
+    margin-left: 126px;
+    
+}
+
+.buy-button {
+    width: 270px;
+    height: 84px;
+    border-radius: 100px;
+    margin: 30px 0px 146px 126px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+    @extend %text-button-style;
+    font-size: 35px;
+    background-color: $VR-purpl-color;
+}
+
+.possibilities-page__title {
+    @extend %header-big-style;
+    margin: 89px 0px 14px 125px;
+}
+
+.content-box-for-cards {
+    display: flex;
+    gap: 71px;
+    margin-left: 127px;
+    margin-right: 72px;
+
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 114px;
+}
+
+.card__background-color {
+    display: flex;
+    flex-direction: column;
+    height: 233px;
+    background-color: $VR-peach-color;
+}
+.card__image_possibilities-1 {
+    align-self: center;
+    width: 298px;
+    height: 255px;
+    background-image: url(../images/praktikum3\ 1.png);
+    background-repeat: no-repeat;
+    margin-top: 15px;
+    margin-bottom: -37px;
+}
+
+.card__image_possibilities-2 {
+    align-self: center;
+    width: 303px;
+    height: 278px;
+    background-image: url(../images/praktikum2\ 1.png);
+    background-repeat: no-repeat;
+    margin-bottom: -45px;
+}
+
+.card__image_possibilities-3 {
+    align-self: center;
+    width: 298px;
+    height: 255px;
+    background-image: url(../images/praktikum1\ 1.png);
+    background-repeat: no-repeat;
+    margin-top: 5px;
+    margin-bottom: -37px;
+}
+
+.card__title {
+    @extend %header-small-style;
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+.card__text {
+    @extend %text-main-style
+}
+
+.subscribe-form {
+display: flex;
+flex-direction: column;
+background-color: $VR-peach-color;
+height: 233px;
+margin-top: 25px;
+@extend %text-main-style
+}
+
+.subscribe-form__contact {
+    height: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.subscribe-form__title {
+    @extend %header-small-style;
+    color: #FFF;
+    padding: 25px 0px 6px 18px;
+}
+
+.subscribe-form__button {
+    width: 135px;
+height: 38px;
+border-radius: 100px;
+margin-top: 23px;
+margin-left: 18px;
+background-color: $VR-purpl-color;
+@extend %text-button-style
+}
+.navigation{
+    display: flex;
+    gap: 34px;
+    padding-left: 126px;
+    padding-bottom: 80px;
+}
+
+.navigation__item{
+    @extend %text-main-style;
+}
+.navigation__item:hover {
+    color: $VR-purpl-color;
+}
